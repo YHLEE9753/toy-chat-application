@@ -17,7 +17,6 @@ public class MemberService {
         Member member = memberRepository.findById(memberId).orElseThrow(() -> {
             throw new RuntimeException();
         });
-
-        return member.changeName(newName);
+        return null;
     }
 }

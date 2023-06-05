@@ -31,6 +31,12 @@ dependencies {
 	// STOMP WEB SOCKET
 	implementation 'org.webjars:stomp-websocket:2.3.4'
 
+	// QUERYDSL
+	implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+	annotationProcessor "com.querydsl:querydsl-apt:5.0.0:jakarta"
+	annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+	annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+
 	// OTHERS
 	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 
@@ -54,4 +60,19 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+// QUERYDSL SETTING
+def querydslDir = "$buildDir/generated/querydsl"
+
+sourceSets {
+	main.java.srcDirs += [ querydslDir ]
+}
+
+tasks.withType(JavaCompile) {
+	options.annotationProcessorGeneratedSourcesDirectory = file(querydslDir)
+}
+
+clean.doLast {
+	file(querydslDir).deleteDir()
 }
