@@ -24,8 +24,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 
+	// MESSAGE BROKER
+	implementation 'org.springframework.boot:spring-boot-starter-amqp'
+	implementation 'org.springframework.boot:spring-boot-starter-reactor-netty'
+
 	// STOMP WEB SOCKET
 	implementation 'org.webjars:stomp-websocket:2.3.4'
+
+	// OTHERS
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 
 	// DB
 	runtimeOnly 'com.mysql:mysql-connector-j'
@@ -36,8 +43,11 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 
 	// TEST
-	testImplementation "org.testcontainers:mysql:1.17.2"
+	testImplementation 'org.springframework.amqp:spring-rabbit-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// TEST CONTAINER
+	testImplementation "org.testcontainers:mysql:1.17.2"
 	testImplementation 'org.springframework.boot:spring-boot-testcontainers'
 	testImplementation 'org.testcontainers:junit-jupiter'
 }
