@@ -4,12 +4,12 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 import java.util.*;
 
-@Repository
+//@Repository
 public class ChatRoomRepository {
 
     private Map<String, ChatRoomDTO> chatRoomDTOMap;
 
-    @PostConstruct
+//    @PostConstruct
     private void init(){
         chatRoomDTOMap = new LinkedHashMap<>();
     }

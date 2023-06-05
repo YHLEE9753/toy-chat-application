@@ -10,30 +10,32 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 @Log4j2
-public class ChatHandler extends TextWebSocketHandler {
+public class ChatHandler
+//        extends TextWebSocketHandler {
+{
     private static List<WebSocketSession> list = new ArrayList<>();
 
-    @Override
-    protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
-        String payload = message.getPayload();
-        log.info("payload : " + payload);
-
-        for(WebSocketSession sess: list) {
-            sess.sendMessage(message);
-        }
-    }
-    @Override
-    public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        list.add(session);
-        log.info(session + " client connection established");
-    }
-
-
-    @Override
-    public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
-        log.info(session + " client connection closed");
-        list.remove(session);
-    }
+//    @Override
+//    protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+//        String payload = message.getPayload();
+//        log.info("payload : " + payload);
+//
+//        for(WebSocketSession sess: list) {
+//            sess.sendMessage(message);
+//        }
+//    }
+//    @Override
+//    public void afterConnectionEstablished(WebSocketSession session) throws Exception {
+//        list.add(session);
+//        log.info(session + " client connection established");
+//    }
+//
+//
+//    @Override
+//    public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
+//        log.info(session + " client connection closed");
+//        list.remove(session);
+//    }
 }
