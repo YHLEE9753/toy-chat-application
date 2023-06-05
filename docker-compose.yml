@@ -1,0 +1,39 @@
+version: "2.6"
+services:
+  rabbitmq:
+    build:
+      context: /dockerfiles/rabbitmq
+    container_name: rabbitmq
+    volumes:
+      - /dockerfiles/rabbitmq:/var/lib/rabbitmq/
+    ports:
+      - "15672:15672"
+      - "5671:5671"
+      - "5672:5672"
+      - "61613:61613"
+      - "61614:61614"
+      - "4369:4369"
+      - "25672:25672"
+      - "1883:1883"
+      - "8883:8883"
+  #    environment:
+  #      RABBITMQ_DEFAULT_USER: "admin"
+  #      RABBITMQ_DEFAULT_PASS: "admin1234"
+
+  mysql:
+    build:
+      context: /dockerfiles/mysql
+    container_name: mysql-container
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - /dockerfiles/mysql:/var/lib/mysql
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: mysql-container
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
