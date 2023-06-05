@@ -16,11 +16,7 @@ class MemberServiceTest extends MySqlContainerSetting {
     @Test
     @DisplayName("Member 이름 바꾸기")
     void changeMemberName(){
-        Member member = new Member("yong");
-        memberRepository.save(member);
-        member.changeName("hoon");
 
-        Assertions.assertThat(member.getName()).isEqualTo("hoon");
     }
 
 }

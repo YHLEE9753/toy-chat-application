@@ -11,20 +11,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id", unique = true, nullable = false, updatable = false)
     private Long id;
 
-    @Column(name = "name", length = 30, nullable = false)
-    private String name;
+    @Column(name = "email", length = 40, unique = true, nullable = false)
+    private String email;
+
+    @Column(name = "nick_name", length = 30, unique = true, nullable = false)
+    private String nickName;
+
+    @Column(name = "is_deleted", nullable = false)
+    private boolean isDeleted;
 
     @Builder
-    public Member(String name) {
-        this.name = name;
-    }
-
-    public String changeName(String name){
-        this.name = name;
-        return name;
+    public Member(String email, String nickName) {
+        this.email = new Email(email).getAddress();;
+        this.nickName = nickName;
+        this.isDeleted = false;
     }
 }
