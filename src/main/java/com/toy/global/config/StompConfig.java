@@ -1,4 +1,4 @@
-package com.toy.chat.domain.chat3;
+package com.toy.global.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
