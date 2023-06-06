@@ -1,6 +1,6 @@
-package com.toy.global.error.exception;
+package com.toy.chat.global.error.exception;
 
-import com.toy.global.error.dto.ErrorCode;
+import com.toy.chat.global.error.dto.ErrorCode;
 
 import java.text.MessageFormat;
 
@@ -34,4 +34,5 @@ public class MemberException extends BusinessException {
         return new MemberException(ErrorCode.REGISTERED_MEMBER,
                 MessageFormat.format("이미 등록된 회원 입니다. (email: {0})", email));
     }
+
 }

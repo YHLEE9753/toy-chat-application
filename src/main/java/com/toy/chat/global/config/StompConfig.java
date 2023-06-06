@@ -1,4 +1,4 @@
-package com.toy.global.config;
+package com.toy.chat.global.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

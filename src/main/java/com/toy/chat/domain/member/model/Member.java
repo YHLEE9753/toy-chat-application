@@ -21,13 +21,21 @@ public class Member {
     @Column(name = "nick_name", length = 30, unique = true, nullable = false)
     private String nickName;
 
+    @Column(name = "password", length = 50, nullable = false)
+    private String password;
+
     @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted;
 
     @Builder
-    public Member(String email, String nickName) {
+    public Member(String email, String nickName, String password) {
         this.email = new Email(email).getAddress();;
         this.nickName = nickName;
+        this.password = password;
         this.isDeleted = false;
+    }
+
+    public void change(String nickName){
+        this.nickName = nickName;
     }
 }

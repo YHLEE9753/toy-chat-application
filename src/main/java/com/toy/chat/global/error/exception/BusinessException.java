@@ -1,6 +1,6 @@
-package com.toy.global.error.exception;
+package com.toy.chat.global.error.exception;
 
-import com.toy.global.error.dto.ErrorCode;
+import com.toy.chat.global.error.dto.ErrorCode;
 import lombok.Getter;
 
 @Getter

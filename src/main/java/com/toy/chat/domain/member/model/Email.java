@@ -4,7 +4,7 @@ import static lombok.AccessLevel.*;
 
 import java.util.regex.Pattern;
 
-import com.toy.global.error.exception.MemberException;
+import com.toy.chat.global.error.exception.MemberException;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 @Embeddable
 @NoArgsConstructor(access = PROTECTED)
 public class Email {
-
     private static final String EMAIL_REGEX = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
     private String address;
 

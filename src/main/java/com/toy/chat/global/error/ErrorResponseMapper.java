@@ -1,7 +1,7 @@
-package com.toy.global.error;
+package com.toy.chat.global.error;
 
-import com.toy.global.error.dto.ErrorCode;
-import com.toy.global.error.dto.ErrorResponse;
+import com.toy.chat.global.error.dto.ErrorCode;
+import com.toy.chat.global.error.dto.ErrorResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 

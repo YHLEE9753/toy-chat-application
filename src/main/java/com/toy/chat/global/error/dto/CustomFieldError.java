@@ -1,4 +1,4 @@
-package com.toy.global.error.dto;
+package com.toy.chat.global.error.dto;
 
 import java.util.Collections;
 import java.util.List;

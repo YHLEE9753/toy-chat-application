@@ -1,4 +1,4 @@
-package com.toy.global.config;
+package com.toy.chat.global.config;
 
 import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
