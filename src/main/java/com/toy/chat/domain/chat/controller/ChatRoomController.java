@@ -1,13 +1,18 @@
-package com.toy.chat.domain.chat3;
+package com.toy.chat.domain.chat.controller;
 
+import com.toy.chat.domain.chat.service.ChatRoomService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@RequestMapping(value = "/chat")
+@RestController
+@RequestMapping("/api/v1/chatroom")
+@RequiredArgsConstructor
 public class ChatRoomController {
+    private ChatRoomService chatRoomService;
 
     @GetMapping("/rooms")
     public String getRooms(){

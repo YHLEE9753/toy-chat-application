@@ -40,6 +40,7 @@ dependencies {
 
 	// OTHERS
 	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+	implementation 'org.apache.commons:commons-lang3'
 
 	// DB
 	runtimeOnly 'com.mysql:mysql-connector-j'

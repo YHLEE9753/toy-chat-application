@@ -1,4 +1,4 @@
-package com.toy.chat.domain.chat3;
+package com.toy.chat.domain.chat.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

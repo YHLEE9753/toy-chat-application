@@ -1,5 +1,6 @@
 package com.toy.chat.domain.member.model;
 
+import com.toy.chat.global.base.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -9,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Member {
+public class Member extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id", unique = true, nullable = false, updatable = false)
@@ -26,6 +27,7 @@ public class Member {
 
     @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted;
+
 
     @Builder
     public Member(String email, String nickName, String password) {

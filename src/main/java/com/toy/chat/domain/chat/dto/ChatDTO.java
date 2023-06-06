@@ -1,4 +1,4 @@
-package com.toy.chat.domain.chat3;
+package com.toy.chat.domain.chat.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;

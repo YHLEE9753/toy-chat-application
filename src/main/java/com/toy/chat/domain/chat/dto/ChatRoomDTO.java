@@ -1,4 +1,4 @@
-package com.toy.chat.domain.chat3;
+package com.toy.chat.domain.chat.dto;
 
 import lombok.Getter;
 import lombok.Setter;
