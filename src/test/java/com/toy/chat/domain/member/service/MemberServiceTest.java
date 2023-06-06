@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 
 class MemberServiceTest extends ServiceTestConfig {
-    @Autowired
+    @Autowired(required = false)
     private MemberService memberService;
 
     @Test

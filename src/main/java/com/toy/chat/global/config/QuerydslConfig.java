@@ -10,8 +10,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 @Configuration
-@EnableJpaAuditing
-@EnableJpaRepositories(basePackages = "com.toy.chat")
 public class QuerydslConfig {
 
     @PersistenceContext
