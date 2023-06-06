@@ -10,7 +10,7 @@ import java.util.Optional;
 import static com.toy.chat.domain.member.model.QMember.member;
 
 @RequiredArgsConstructor
-public class CustomMemberRepositoryImpl implements CustomMemberRepository {
+public class MemberRepositoryCustomImpl implements MemberRepositoryCustom {
     private final JPAQueryFactory jpaQueryFactory;
 
     @Override

@@ -4,6 +4,6 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class MemberChatRoomRepositoryImpl implements MemberChatRoomRepositoryCustom {
+public class MemberChatRoomRepositoryCustomImpl implements MemberChatRoomRepositoryCustom {
     private final JPAQueryFactory jpaQueryFactory;
 }

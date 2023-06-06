@@ -4,7 +4,7 @@ import com.toy.chat.domain.member.model.Member;
 
 import java.util.Optional;
 
-public interface CustomMemberRepository {
+public interface MemberRepositoryCustom {
     Optional<Member> findMemberById(Long memberId);
 
     Optional<Member> findMemberByEmail(String email);
